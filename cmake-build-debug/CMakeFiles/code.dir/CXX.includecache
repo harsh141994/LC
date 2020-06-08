@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/harshvarshney/LSCMU/code/main.cpp
+iostream
+-
+vector
+-
+set
+/Users/harshvarshney/LSCMU/code/set
+
