@@ -4,38 +4,6 @@
 
 using namespace std;
 
-vector<vector<int>> threeSum(vector<int>& nums) {
-  sort(nums.begin(), nums.end());
-  int n = nums.size();
-
-  set<vector<int>> ans;
-
-  for (int i=0; i<n-2; i++) {
-    if (i!=0 && nums[i]==nums[i-1]) continue;
-    for (int j= i+1, k= n-1; j<k && j<n; ) {
-      if (nums[i] + nums[j] + nums[k]== 0) {
-        vector<int> v;
-        v.push_back(nums[i]);
-        v.push_back(nums[j]);
-        v.push_back(nums[k]);
-        ans.insert(v);
-        j++;
-      }
-      else if (nums[i] + nums[j] + nums[k] < 0) {
-        j++;
-      }
-      else {
-        k--;
-      }
-    }
-  }
-
-  vector<vector<int>> a;
-  for (auto it=ans.begin(); it!=ans.end(); it++) {
-    a.push_back(*it);
-  }
-  return a;
-}
 
 int main() {
 
